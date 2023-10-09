@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>نمایش تصاویر</title>
+
+</head>
+<body>
+	<h1>نمایش تصاویر</h1>
+	<form>
+		<label for="name">نام:</label>
+		<input type="text" id="name" name="name"><br><br>
+		<input type="button" value="نمایش تصاویر" onclick="showImages()">
+	
+	</form>
+	<script>
+		function showImages() {
+			var name = document.getElementById("name").value;
+			for (var i = 1; i <= 10; i++) {
+				var img = document.createElement("img");
+				img.src = "https://example.com/images/" + name + "_" + i + ".jpg";
+				document.body.appendChild(img);
+			}
+		}
+	</script>
+</body>
+
+</html>
